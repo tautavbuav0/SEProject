@@ -4,15 +4,15 @@
 <!--类名称 -->
 	<servlet>
 		<servlet-name>WebIndex</servlet-name>
-		<servlet-class>com.sep.Web.WebIndex</servlet-class>
+		<servlet-class>com.sep.web.WebIndex</servlet-class>
 	</servlet>	
 	<servlet>
 		<servlet-name>WebAnalysis</servlet-name>
-		<servlet-class>com.sep.Web.WebAnalysis</servlet-class>
+		<servlet-class>com.sep.web.WebAnalysis</servlet-class>
 	</servlet>
 	<servlet>
 		<servlet-name>WebLogin</servlet-name>
-		<servlet-class>com.sep.Web.WebLogin</servlet-class>
+		<servlet-class>com.sep.web.WebLogin</servlet-class>
 	</servlet>
 <!--页面映射 -->	
 	<servlet-mapping>

@@ -8,7 +8,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <html>
 <head>
 	<base href="<%=basePath%>">
-	<title>首页</title>
+	<title>营养分析</title>
 	<!-- CDN镜像，加快访问速度 -->
 	<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 	<!-- AMAZE UI -->
@@ -39,24 +39,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	</div>-->
 	</header>
 <!-- 内容  -->
-	<p>1</p>
-	<p>2</p>
-	<p>3</p>
-	<p>4</p>
-	<p>5</p>
-	<p>6</p>
-	<p>7</p>
-	<p>8</p>
-	<p>9</p>
-	<p>10</p>
-	<p>11</p>
-	<p>12</p>
-	<p>13</p>
-	<p>14</p>
-	<p>15</p>
-	<p>16</p>
-	<p>17</p>
-	<p>18</p>
+	<h1>营养分析</h1>
+
 <!-- 底部栏  -->
 	<footer class="am-topbar am-topbar-inverse am-topbar-fixed-bottom">
 	<ul class="am-avg-sm-3">

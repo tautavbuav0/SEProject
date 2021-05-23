@@ -10,61 +10,49 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<base href="<%=basePath%>">
 	<title>登录</title>
 	<!-- CDN镜像，加快访问速度 -->
-	<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 	<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-	<!-- 使用rem相对像素适配代码，1rem=100px -->
-	<script>
-	(function(doc, win) {
-		var docEl = doc.documentElement,
-			resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
-			recalc = function() {
-				var clientWidth = docEl.clientWidth;
-				if (!clientWidth) return;
-				if (clientWidth >= 640) {
-					docEl.style.fontSize = '100px';
-				} else {
-					docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
-				}
-			};
+	<!-- AMAZE UI -->
+	<link href="http://cdn.amazeui.org/amazeui/2.7.2/css/amazeui.min.css" rel="stylesheet">
+	<link href="assets/css/app.css" rel="stylesheet">
+	<script src="http://cdn.amazeui.org/amazeui/2.7.2/js/amazeui.min.js"></script>
+	<!--<script src="http://cdn.amazeui.org/amazeui/2.7.2/js/amazeui.widgets.helper.min.js"></script> -->
 
-		if (!doc.addEventListener) return;
-		win.addEventListener(resizeEvt, recalc, false);
-		doc.addEventListener('DOMContentLoaded', recalc, false);
-	})(document, window);
-	</script>
-	<style type="text/css">
-		。navbar-brand {
-			font-size: 1rem;
-		}
-		.btn-default {
-			font-size: 0.3rem;
-		}
-	</style>
+	<!-- 手机端控制尺寸 为手机适配 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 </head>
 
 <body>
-	<nav class="nav navbar-default">
-		<div class="container-fluid">
-			<div class="navbar-brand">HOME</div>
-		</div>
-	</nav>
+<!-- 导航栏  -->
+	<header data-am-widget="header" class="am-header am-header-default am-header-fixed">
+	<div class="am-header-left am-header-nav">
+		<a href="index.jsp" class="">
+		<i class="am-header-icon am-icon-home">&nbsp;</i>
+		</a>
+	</div>
 
-	<nav class="navbar-fixed-bottom">
-		<div class="container">
-			<div class="btn-group btn-group-justified" role="group">
-				<div class="btn-group" role="group">
-					<a herf="index"><button type="button" class="btn btn-default">首页</button></a>
-				</div>
-				<div class="btn-group" role="group">
-					<a herf="analysis"><button type="button" class="btn btn-default">营养分析</button></a>
-				</div>
-				<div class="btn-group" role="group">
-					<a herf="login"><button type="button" class="btn btn-default">帐号</button></a>
-				</div>
-			</div>
-		</div>
-	</nav>
+	<h1 class="am-header-title">营养订餐</h1>
+
+	<% if (session.getAttribute("username") != null ) { %>
+	<div class="am-header-right am-header-nav">
+		<a href="/logout">
+		<i class="am-header-icon am-icon-bars">&nbsp;</i>
+		</a>
+	</div>
+	<% } %>
+	</header>
+<!-- 内容  -->
+	<h1>登陆！</h1>
+<!-- 底部栏  -->
+	<footer class="am-topbar am-topbar-inverse am-topbar-fixed-bottom">
+	<ul class="am-avg-sm-3">
+		<li><a class="footer-a" href="index"><div>首页</div></a></li>
+		<li><a class="footer-a" href="analysis"><div>营养分析</div></a></li>
+		<% if (session.getAttribute("username") == null ) { %>
+		<li><a class="footer-a" href="login"><div>登陆</div></a></li>
+		<% } else { %>
+		<li><a class="footer-a" href="account"><div>我的</div></a></li>
+		<% } %>
+	</ul>
+	</footer>
 </body>
 </html>
