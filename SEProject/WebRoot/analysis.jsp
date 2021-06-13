@@ -47,7 +47,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<li><a class="footer-a" href="index"><div>首页</div></a></li>
 		<li><a class="footer-a" href="analysis"><div>营养分析</div></a></li>
 		<% if (session.getAttribute("username") == null ) { %>
-		<li><a class="footer-a" href="login"><div>登陆</div></a></li>
+		<li><a class="footer-a" href="login"><div>登录</div></a></li>
 		<% } else { %>
 		<li><a class="footer-a" href="account"><div>我的</div></a></li>
 		<% } %>

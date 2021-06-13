@@ -41,14 +41,38 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	<% } %>
 	</header>
 <!-- 内容  -->
-	<h1>登陆！</h1>
-<!-- 底部栏  -->
+	<form class="am-form">
+		<fieldset>
+			<legend>登录</legend>
+
+			<div class="am-form-group">
+				<label for="doc-ipt-email-1">邮箱</label> 
+				<input type="email" class="" id="doc-ipt-email-1" placeholder="请输入邮箱账号">
+			</div>
+
+			<div class="am-form-group">
+				<label for="doc-ipt-pwd-1">密码</label>
+				<input type="password" class="" id="doc-ipt-pwd-1" placeholder="请输入密码">
+			</div>
+			<center>
+				<button type="submit" class="am-btn am-btn-default btn-login">登录</button>
+				<br/>
+				<br/>
+				<br/>
+				<br/>
+				<br/>
+				<a class="a-create">没有账号？注册一个吧！</a>
+			</center>
+
+		</fieldset>
+	</form>
+	<!-- 底部栏  -->
 	<footer class="am-topbar am-topbar-inverse am-topbar-fixed-bottom">
 	<ul class="am-avg-sm-3">
 		<li><a class="footer-a" href="index"><div>首页</div></a></li>
 		<li><a class="footer-a" href="analysis"><div>营养分析</div></a></li>
 		<% if (session.getAttribute("username") == null ) { %>
-		<li><a class="footer-a" href="login"><div>登陆</div></a></li>
+		<li><a class="footer-a" href="login"><div>登录</div></a></li>
 		<% } else { %>
 		<li><a class="footer-a" href="account"><div>我的</div></a></li>
 		<% } %>
