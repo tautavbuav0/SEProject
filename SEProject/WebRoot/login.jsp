@@ -47,12 +47,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 			<div class="am-form-group">
 				<label for="doc-ipt-email-1">邮箱</label> 
-				<input type="email" class="" id="doc-ipt-email-1" placeholder="请输入邮箱账号">
+				<input type="email" class="" id="email" placeholder="请输入邮箱账号">
 			</div>
 
 			<div class="am-form-group">
 				<label for="doc-ipt-pwd-1">密码</label>
-				<input type="password" class="" id="doc-ipt-pwd-1" placeholder="请输入密码">
+				<input type="password" class="" id="pwd" placeholder="请输入密码">
 			</div>
 			<center>
 				<button type="submit" class="am-btn am-btn-default btn-login">登录</button>
@@ -61,7 +61,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<br/>
 				<br/>
 				<br/>
-				<a class="a-create">没有账号？注册一个吧！</a>
+				<a href="register">没有账号？注册一个吧！</a>
 			</center>
 
 		</fieldset>

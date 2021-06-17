@@ -14,6 +14,10 @@
 		<servlet-name>WebLogin</servlet-name>
 		<servlet-class>com.sep.web.WebLogin</servlet-class>
 	</servlet>
+	<servlet>
+		<servlet-name>WebRegister</servlet-name>
+		<servlet-class>com.sep.web.WebRegister</servlet-class>
+	</servlet>
 <!--页面映射 -->	
 	<servlet-mapping>
 		<servlet-name>WebIndex</servlet-name>
@@ -26,6 +30,10 @@
 	<servlet-mapping>
 		<servlet-name>WebLogin</servlet-name>
 		<url-pattern>/login</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>WebRegister</servlet-name>
+		<url-pattern>/register</url-pattern>
 	</servlet-mapping>
 	
 	<welcome-file-list>
